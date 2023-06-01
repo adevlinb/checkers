@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Bruno Ace SC', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/marble.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+main {
+    background-color: rgba(255, 255,  255, 0.33);
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2
+};
+
+header {
+    font-size: 6vmin;
+    letter-spacing: 1vmin;
+}
+
+header span:nth-of-type(even) {
+    color: black;
+}
+
+header span:nth-of-type(odd) {
+    color: red;
+}
+
+h1 {
+    color: black;
+    font-size: 2vmin;
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 10vmin);
+    grid-template-rows: repeat(8, 10vmin);
+    gap: 0;
+    border: 1vmin solid black;
+}
+
+.black-piece {
+    border-radius: 50%;
+    background-color: black;
+    height: 7vmin;
+    width: 7vmin;
+    display: inline-block;
+}
+
+.black-king {
+    border: 4px solid red;
+    border-radius: 50%;
+    background-color: black;
+    height: 7vmin;
+    width: 7vmin;
+    display: inline-block;
+}
+
+.red-piece {
+    border-radius: 50%;
+    background-color: red;
+    height: 7vmin;
+    width: 7vmin;
+    display: inline-block;
+}
+
+.red-king {
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: red;
+    height: 7vmin;
+    width: 7vmin;
+    display: inline-block;
+}
+
+#board > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#board > div:hover {
+    border: 0.25vmin solid blue;
+    transition: 0.2s ease-out;
+}
+
+.gold {
+    background-color: #EBB64A;
+}
+
+#black-graveyard {
+    display: grid;
+    grid-template-columns: repeat(2, 10vmin);
+    grid-template-rows: repeat(6, 10vmin);
+    width: 10vw;
+    background-color: rgba(255, 255,  255, 0.33);
+    order: 1;
+    margin: 20px;
+}
+
+#red-graveyard {
+    display: grid;
+    grid-template-columns: repeat(2, 10vmin);
+    grid-template-rows: repeat(6, 10vmin);
+    width: 10vw;
+    background-color: rgba(255, 255,  255, 0.33);
+    order: 3;
+    margin: 20px;
+}
+
+button {
+    border: 0.1vmin solid grey;
+    color: grey;
+    transition: 0.2s ease-out;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgrey;
+}
