@@ -6,11 +6,10 @@
 body {
     height: 100vh;
     margin: 0;
-    font-family: 'Bruno Ace SC', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/marble.webp");
+    background-image: url("/images/marble.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,28 +100,31 @@ h1 {
 }
 
 .gold {
-    background-color: #EBB64A;
+    background-color: #827cda;
+}
+
+.white {
+    background-color: rgba(255, 255,  255, 0.66);
+    
+}
+
+#black-graveyard, #red-graveyard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin: 20px;
+    gap: 3px;
+    min-width: 14vmin;
 }
 
 #black-graveyard {
-    display: grid;
-    grid-template-columns: repeat(2, 10vmin);
-    grid-template-rows: repeat(6, 10vmin);
-    width: 10vw;
-    background-color: rgba(255, 255,  255, 0.33);
     order: 1;
-    margin: 20px;
 }
 
 #red-graveyard {
-    display: grid;
-    grid-template-columns: repeat(2, 10vmin);
-    grid-template-rows: repeat(6, 10vmin);
-    width: 10vw;
-    background-color: rgba(255, 255,  255, 0.33);
     order: 3;
-    margin: 20px;
 }
+
 
 button {
     border: 0.1vmin solid grey;
